@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio — Brothers Construction</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="icon" type="image/svg+xml" href="images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
   <header id="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="index.html">
-        <img src="images/logo.svg" alt="Brothers Construction" class="logo">
+        <img src="images/logo.png" alt="Brothers Construction" class="logo">
         <span class="brand-text">Brothers<br><em>Construction</em></span>
       </a>
       <nav class="menu" aria-label="Primary">
@@ -241,7 +241,7 @@
   <footer>
     <div class="container footer-inner">
       <a class="brand brand--footer" href="index.html">
-        <img src="images/logo.svg" alt="Brothers Construction" class="logo logo--sm">
+        <img src="images/logo.png" alt="Brothers Construction" class="logo logo--sm">
         <span>Brothers Construction</span>
       </a>
       <nav class="footer-nav">
@@ -276,6 +276,32 @@
       });
     }, { threshold: 0.08 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Book-open — auto-wrap all portfolio/case images
+    document.querySelectorAll('.p-card-img, .ba-img').forEach(img => {
+      const wrap = document.createElement('div');
+      wrap.className = 'book-wrap';
+      img.parentNode.insertBefore(wrap, img);
+      wrap.appendChild(img);
+      if (img.classList.contains('p-card-img')) {
+        wrap.style.cssText = 'border-radius:0; height:220px; perspective:800px;';
+        img.style.height = '220px';
+        img.style.objectFit = 'cover';
+      } else {
+        wrap.style.perspective = '800px';
+      }
+    });
+
+    // Book-open observer
+    const bookObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('book-open'), i * 100);
+          bookObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.book-wrap').forEach(el => bookObserver.observe(el));
 
     // Sticky header
     window.addEventListener('scroll', () => {
