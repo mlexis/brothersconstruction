@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brothers Construction — Westchester County</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══ -->
+  <header id="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <img src="images/logo.svg" alt="Brothers Construction" class="logo">
+        <span class="brand-text">Brothers<br><em>Construction</em></span>
+      </a>
+      <nav class="menu" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-cta">Get a Quote</a>
+      </nav>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu(this)">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu" hidden>
+      <a href="#services" onclick="closeMobile()">Services</a>
+      <a href="portfolio.html" onclick="closeMobile()">Portfolio</a>
+      <a href="#about" onclick="closeMobile()">About</a>
+      <a href="#contact" onclick="closeMobile()">Get a Quote</a>
+    </div>
+  </header>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1800&q=80')"></div>
+    <div class="container hero-content">
+      <p class="hero-eyebrow">Westchester County, NY</p>
+      <h1>Built Right.<br><em>Every Time.</em></h1>
+      <p class="hero-sub">Family-run construction — renovations, custom builds, and repairs with quality you can see and trust.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">Request a Quote</a>
+        <a class="btn btn-ghost" href="portfolio.html">View Our Work</a>
+      </div>
+    </div>
+    <div class="hero-badge">
+      <span>Licensed</span>
+      <span>&amp;</span>
+      <span>Insured</span>
+    </div>
+  </section>
+
+  <!-- ═══ TRUST BAR ═══ -->
+  <div class="trust-bar">
+    <div class="container trust-inner">
+      <div class="trust-item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>Family-Run Business</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>On-Time Delivery</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>Quality Craftsmanship</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>Clear Communication</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ SERVICES ═══ -->
+  <section id="services" class="section-services">
+    <div class="services-side-img services-side-img--left">
+      <img src="images/kitchen2 a.jpg" alt="">
+    </div>
+    <div class="services-side-img services-side-img--right">
+      <img src="images/bathroom1 a.jpg" alt="">
+    </div>
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">What We Do</p>
+        <h2>Our Services</h2>
+        <p class="section-sub">From full gut renovations to targeted repairs — we bring the same craftsmanship to every job.</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Renovations</h3>
+          <p>Kitchen, bathroom, and whole-home remodels with a focus on quality craftsmanship and lasting results.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Custom Builds</h3>
+          <p>From design to delivery, we build custom solutions tailored precisely to your vision and your budget.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3>Repairs</h3>
+          <p>Reliable, affordable repairs to keep your home or business in top shape — done right the first time.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FEATURED WORK ═══ -->
+  <section id="work" class="section-work">
+    <div class="container">
+      <div class="section-header section-header--light">
+        <p class="section-label">Recent Projects</p>
+        <h2>Featured Work</h2>
+        <p class="section-sub">A few highlights from our portfolio — every project completed in Westchester County.</p>
+      </div>
+      <div class="work-grid">
+        <div class="work-tile work-tile--tall book-wrap">
+          <img src="images/kitchen2 a.jpg" alt="Kitchen remodel" loading="lazy">
+          <div class="work-tile-label">Kitchen Remodel</div>
+        </div>
+        <div class="work-tile book-wrap">
+          <img src="images/bathroom1 a.jpg" alt="Bathroom renovation" loading="lazy">
+          <div class="work-tile-label">Bathroom Renovation</div>
+        </div>
+        <div class="work-tile book-wrap">
+          <img src="images/basement1 a2.jpg" alt="Basement finish" loading="lazy">
+          <div class="work-tile-label">Basement Finish</div>
+        </div>
+      </div>
+      <div class="work-cta">
+        <a class="btn btn-primary" href="portfolio.html">See Full Portfolio →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about" class="section-about">
+    <div class="container about-layout">
+      <div class="about-text">
+        <p class="section-label">Our Story</p>
+        <h2>Built on Family Values</h2>
+        <p>We are a small, family-run construction team based in Westchester County. We specialize in renovations, custom builds, and repairs — with an emphasis on quality work and clear, honest communication from start to finish.</p>
+        <p>Every project gets our personal attention. We treat every home like it's our own.</p>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Client Satisfaction</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">Local</span>
+            <span class="stat-label">Westchester County</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">On-Time</span>
+            <span class="stat-label">Delivery Guarantee</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-img-wrap">
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80" alt="Construction team at work">
+        <div class="about-img-badge">
+          <strong>Family-Run</strong>
+          <span>Since Day One</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact" class="section-contact">
+    <div class="container contact-layout">
+      <div class="contact-text">
+        <p class="section-label">Let's Build Something</p>
+        <h2>Get a Free Quote</h2>
+        <p>Tell us about your project and we'll get back to you as soon as possible. No obligation, no pressure.</p>
+        <div class="contact-details">
+          <a href="/cdn-cgi/l/email-protection#284a5a475c404d5a5b4b47465b5c5a5d4b5c414746101d684f45494144064b4745" class="contact-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span class="__cf_email__" data-cfemail="4c2e3e233824293e3f2f23223f383e392f3825232274790c2b212d2520622f2321">[email&#160;protected]</span>
+          </a>
+        </div>
+      </div>
+      <form class="contact-form" method="post" action="#" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <label class="form-field">
+            <span>Your Name</span>
+            <input required name="name" autocomplete="name" placeholder="John Smith">
+          </label>
+          <label class="form-field">
+            <span>Email Address</span>
+            <input required type="email" name="email" autocomplete="email" placeholder="john@example.com">
+          </label>
+        </div>
+        <label class="form-field">
+          <span>Phone Number</span>
+          <input name="phone" autocomplete="tel" placeholder="(914) 555-0100">
+        </label>
+        <label class="form-field">
+          <span>Tell us about your project</span>
+          <textarea required name="message" rows="5" placeholder="Kitchen remodel in Yonkers, looking at October start…"></textarea>
+        </label>
+        <button class="btn btn-primary btn-full" type="submit">Send My Request →</button>
+        <p id="form-success" class="form-success" hidden>✓ Thanks! We'll be in touch soon.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="container footer-inner">
+      <a class="brand brand--footer" href="index.html">
+        <img src="images/logo.svg" alt="Brothers Construction" class="logo logo--sm">
+        <span>Brothers Construction</span>
+      </a>
+      <nav class="footer-nav">
+        <a href="#services">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="footer-copy">© <span id="year"></span> Brothers Construction · Westchester County, NY · Built with Pride</p>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function toggleMenu(btn) {
+      const menu = document.getElementById('mobile-menu');
+      const open = !menu.hidden;
+      menu.hidden = open;
+      btn.setAttribute('aria-expanded', String(!open));
+      btn.classList.toggle('is-open', !open);
+    }
+
+    function closeMobile() {
+      const menu = document.getElementById('mobile-menu');
+      menu.hidden = true;
+      document.querySelector('.hamburger').setAttribute('aria-expanded', 'false');
+    }
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById('form-success').hidden = false;
+      e.target.reset();
+    }
+
+    // Scroll-reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(el => {
+        if (el.isIntersecting) { el.target.classList.add('revealed'); observer.unobserve(el.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.service-card, .about-text, .about-img-wrap, .contact-text, .contact-form').forEach(el => {
+      el.classList.add('reveal');
+      observer.observe(el);
+    });
+
+    // Book-open observer
+    const bookObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('book-open'), i * 150);
+          bookObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    document.querySelectorAll('.book-wrap').forEach(el => bookObserver.observe(el));
+
+    // Services side images — slide in on enter, slide out on exit
+    const servicesSection = document.getElementById('services');
+    function updateSideImages() {
+      const rect = servicesSection.getBoundingClientRect();
+      const inView  = rect.top < window.innerHeight * 0.75 && rect.bottom > window.innerHeight * 0.25;
+      const pastView = rect.bottom < window.innerHeight * 0.25;
+      servicesSection.classList.toggle('side-visible', inView);
+      servicesSection.classList.toggle('side-gone', pastView);
+    }
+    window.addEventListener('scroll', updateSideImages, { passive: true });
+    updateSideImages();
+
+    // Sticky header shrink
+    window.addEventListener('scroll', () => {
+      document.getElementById('site-header').classList.toggle('scrolled', window.scrollY > 60);
+    });
+  </script>
+</body>
+</html>
